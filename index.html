@@ -1,0 +1,20 @@
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.1/aframe/build/aframe-ar.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs>
+    <a-assets>
+      <a-asset-item id="dog-obj" src="assets/dog.obj"></a-asset-item>
+      <a-asset-item id="dog-mtl" src="assets/dog.mtl"></a-asset-item>
+    </a-assets>
+
+    <a-marker preset="hiro">
+      <a-obj-model src="#dog-obj" mtl="#dog-mtl"></a-obj-model>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+
+</html>
